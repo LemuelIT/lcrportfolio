@@ -1,5 +1,5 @@
 /* ==========================================================================
-   LEMUL C. REYES PORTFOLIO - DESIGN SYSTEM & STYLESHEET
+   LEMUEL C. REYES PORTFOLIO - DESIGN SYSTEM & STYLESHEET
    ========================================================================== */
 
 /* 1. Global Reset & Variables */
@@ -1246,27 +1246,86 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    15. Media Queries (Responsive Adjustments)
    ========================================================================== */
+/* Large Screens (Desktop) */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+/* Medium Screens (Tablets & Small Laptops) */
 @media (max-width: 992px) {
+    .section {
+        padding: 100px 0;
+    }
+    
     .hero-title {
         font-size: 3.25rem;
     }
+    
+    .hero-subtitle {
+        font-size: 1.65rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+    }
+    
     .about-grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }
+    
     .about-stats-card {
         min-height: auto;
         padding: 30px;
     }
+    
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }
+    
+    .highlights-list {
+        grid-template-columns: 1fr;
+    }
 }
 
+/* Tablet & Touch Devices (up to 768px) */
 @media (max-width: 768px) {
+    :root {
+        --header-height: 70px;
+        --container-max-width: 100%;
+    }
+    
     .section {
         padding: 80px 0;
+    }
+    
+    .container {
+        padding: 0 18px;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .subtitle-badge {
+        font-size: 0.8rem;
     }
     
     .nav-menu {
@@ -1304,53 +1363,607 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
     }
     
+    .hero-section {
+        padding-top: calc(var(--header-height) + 20px);
+    }
+    
     .hero-title {
         font-size: 2.75rem;
+        line-height: 1.15;
     }
     
     .hero-subtitle {
         font-size: 1.45rem;
     }
     
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero-ctas {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-ctas .btn {
+        width: 100%;
+        padding: 12px 20px;
+    }
+    
+    .hero-badge {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+    
+    .scroll-indicator {
+        bottom: -80px;
+    }
+    
+    .about-intro-title {
+        font-size: 1.3rem;
+    }
+    
+    .about-text {
+        font-size: 1rem;
+    }
+    
+    .interests-tags {
+        gap: 8px;
+    }
+    
+    .interest-tag {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        padding-top: 20px;
+    }
+    
+    .stat-number {
+        font-size: 1.25rem;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 16px;
+    }
+    
+    .skill-card {
+        padding: 20px;
+    }
+    
+    .skill-name {
+        font-size: 1rem;
+    }
+    
+    .skill-level {
+        font-size: 0.8rem;
+    }
+    
+    .skill-icon-box {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .project-card-image {
+        height: 180px;
+    }
+    
+    .project-placeholder-icon {
+        font-size: 3rem;
+    }
+    
+    .project-card-content {
+        padding: 20px;
+    }
+    
+    .project-card-title {
+        font-size: 1.2rem;
+    }
+    
+    .project-card-desc {
+        font-size: 0.9rem;
+    }
+    
+    .btn-project {
+        padding: 10px 16px;
+        font-size: 0.8rem;
+    }
+    
     .timeline-item {
         padding: 30px 20px;
+        margin-left: 24px;
     }
     
     .timeline-header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 4px;
+        gap: 8px;
+    }
+    
+    .timeline-degree {
+        font-size: 1.25rem;
+    }
+    
+    .coursework-highlights {
+        padding-top: 16px;
+    }
+    
+    .highlights-title {
+        font-size: 0.9rem;
+    }
+    
+    .highlights-list {
+        gap: 10px;
+    }
+    
+    .highlights-list li {
+        font-size: 0.85rem;
+    }
+    
+    .contact-pitch {
+        font-size: 1.5rem;
+    }
+    
+    .contact-text {
+        font-size: 1rem;
+    }
+    
+    .contact-detail-card {
+        padding: 14px 18px;
+        gap: 16px;
+    }
+    
+    .detail-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+    
+    .detail-label {
+        font-size: 0.7rem;
+    }
+    
+    .detail-value {
+        font-size: 0.9rem;
+    }
+    
+    .copy-btn {
+        font-size: 1rem;
+        padding: 6px;
+    }
+    
+    .social-card {
+        padding: 18px;
+    }
+    
+    .social-icon {
+        font-size: 1.75rem;
+        margin-right: 16px;
+    }
+    
+    .social-name {
+        font-size: 1rem;
+    }
+    
+    .social-handle {
+        display: none;
+    }
+    
+    .social-arrow {
+        right: 18px;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-copy {
+        font-size: 0.85rem;
     }
 }
 
+/* Small Mobile Phones (up to 480px) */
 @media (max-width: 480px) {
+    :root {
+        --header-height: 64px;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .container {
+        padding: 0 16px;
+    }
+    
+    .section-header {
+        margin-bottom: 30px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-line {
+        width: 40px;
+        height: 3px;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .hero-section {
+        padding-top: calc(var(--header-height) + 16px);
+    }
+    
     .hero-title {
         font-size: 2.25rem;
+        line-height: 1.2;
     }
+    
     .hero-subtitle {
         font-size: 1.25rem;
+        margin-bottom: 16px;
     }
+    
     .hero-description {
         font-size: 0.95rem;
+        margin-bottom: 24px;
     }
+    
+    .hero-badge {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+        gap: 6px;
+    }
+    
     .hero-ctas {
+        gap: 12px;
         flex-direction: column;
         width: 100%;
     }
+    
     .hero-ctas .btn {
         width: 100%;
+        justify-content: center;
     }
+    
+    .about-intro-title {
+        font-size: 1.1rem;
+        margin-bottom: 16px;
+    }
+    
+    .about-text {
+        font-size: 0.95rem;
+        margin-bottom: 16px;
+    }
+    
+    .interests-title {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+    
+    .interest-tag {
+        padding: 5px 10px;
+        font-size: 0.75rem;
+        gap: 5px;
+    }
+    
+    .profile-placeholder {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+    
+    .profile-icon {
+        font-size: 2rem;
+    }
+    
     .stats-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 16px;
+        padding-top: 16px;
+        border-top: 1px solid var(--border-color);
     }
+    
+    .stat-item {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+    }
+    
+    .stat-number {
+        font-size: 1.1rem;
+        margin-bottom: 0;
+    }
+    
+    .stat-label {
+        font-size: 0.65rem;
+        text-align: right;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
     .skill-card {
-        padding: 24px;
-    }
-    .social-card {
         padding: 16px;
     }
-    .social-handle {
-        display: none;
+    
+    .skill-icon-box {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+    
+    .skill-name {
+        font-size: 0.95rem;
+    }
+    
+    .skill-level {
+        font-size: 0.75rem;
+    }
+    
+    .project-card-image {
+        height: 150px;
+    }
+    
+    .project-placeholder-icon {
+        font-size: 2.5rem;
+    }
+    
+    .project-card-content {
+        padding: 16px;
+    }
+    
+    .project-card-title {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+    .project-card-desc {
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+    }
+    
+    .project-tags {
+        gap: 6px;
+        margin-bottom: 12px;
+    }
+    
+    .project-tag {
+        padding: 3px 8px;
+        font-size: 0.7rem;
+    }
+    
+    .btn-project {
+        padding: 10px 14px;
+        font-size: 0.75rem;
+        width: 100%;
+    }
+    
+    .project-card-badge {
+        top: 12px;
+        right: 12px;
+        padding: 3px 8px;
+        font-size: 0.7rem;
+    }
+    
+    .timeline-item {
+        padding: 20px 16px;
+        margin-left: 20px;
+    }
+    
+    .timeline-dot {
+        width: 12px;
+        height: 12px;
+        left: -6px;
+        top: 32px;
+    }
+    
+    .timeline-period {
+        padding: 3px 10px;
+        font-size: 0.7rem;
+    }
+    
+    .timeline-degree {
+        font-size: 1.15rem;
+    }
+    
+    .timeline-institution {
+        font-size: 0.95rem;
+    }
+    
+    .timeline-desc {
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+    }
+    
+    .coursework-highlights {
+        padding-top: 12px;
+        margin-top: 12px;
+    }
+    
+    .highlights-title {
+        font-size: 0.85rem;
+    }
+    
+    .highlights-list {
+        gap: 8px;
+        grid-template-columns: 1fr;
+    }
+    
+    .highlights-list li {
+        font-size: 0.8rem;
+    }
+    
+    .contact-pitch {
+        font-size: 1.25rem;
+        line-height: 1.3;
+        margin-bottom: 12px;
+    }
+    
+    .contact-text {
+        font-size: 0.95rem;
+        margin-bottom: 24px;
+    }
+    
+    .contact-details {
+        gap: 12px;
+    }
+    
+    .contact-detail-card {
+        padding: 12px 14px;
+        gap: 12px;
+        border-radius: 10px;
+    }
+    
+    .detail-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+    
+    .detail-label {
+        font-size: 0.65rem;
+    }
+    
+    .detail-value {
+        font-size: 0.85rem;
+    }
+    
+    .copy-btn {
+        font-size: 0.9rem;
+        padding: 4px;
+    }
+    
+    .contact-social-grid {
+        gap: 12px;
+    }
+    
+    .social-card {
+        padding: 14px;
+        border-radius: 10px;
+    }
+    
+    .social-icon {
+        font-size: 1.5rem;
+        margin-right: 12px;
+    }
+    
+    .social-name {
+        font-size: 0.95rem;
+    }
+    
+    .social-arrow {
+        right: 14px;
+        font-size: 0.8rem;
+    }
+    
+    .footer {
+        padding: 24px 0;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    
+    .footer-copy {
+        font-size: 0.8rem;
+    }
+    
+    .footer-socials {
+        gap: 12px;
+    }
+    
+    .back-to-top {
+        width: 44px;
+        height: 44px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Extra Small Mobile Phones (320px - 360px) */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 12px;
+    }
+    
+    .section-title {
+        font-size: 1.35rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.15rem;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+        gap: 6px;
+    }
+    
+    .nav-menu {
+        width: 85% !important;
+        padding: 90px 24px 24px 24px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-card {
+        padding: 12px;
+    }
+    
+    .project-card-title {
+        font-size: 1rem;
+    }
+    
+    .contact-pitch {
+        font-size: 1.1rem;
+    }
+    
+    .timeline-degree {
+        font-size: 1.05rem;
+    }
+    
+    .social-card {
+        padding: 10px;
+    }
+    
+    .detail-value {
+        font-size: 0.8rem;
     }
 }
