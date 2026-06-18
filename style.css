@@ -181,6 +181,63 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
+   2.5 Development Status Banner
+   ========================================================================== */
+.dev-banner {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, rgba(244, 63, 94, 0.15), rgba(251, 146, 60, 0.1));
+    border-bottom: 1px solid rgba(244, 63, 94, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 99;
+    padding: 12px 20px;
+    animation: slideDown var(--transition-slow);
+}
+
+.dev-banner-content {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.dev-banner-content i {
+    color: #fb923c;
+    font-size: 1.1rem;
+}
+
+.dev-banner-content strong {
+    color: #fb923c;
+    font-weight: 600;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Adjust header z-index to stay above banner */
+header {
+    position: relative;
+    z-index: 100;
+}
+
+/* ==========================================================================
    3. Glassmorphism Design Token System
    ========================================================================== */
 .glass-panel {
@@ -214,6 +271,10 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    4. Reusable Layout Components
    ========================================================================== */
+main {
+    margin-top: 48px;
+}
+
 .container {
     width: 100%;
     max-width: var(--container-max-width);
