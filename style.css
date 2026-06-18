@@ -188,13 +188,14 @@ h1, h2, h3, h4, h5, h6 {
     top: var(--header-height);
     left: 0;
     right: 0;
-    background: linear-gradient(135deg, rgba(244, 63, 94, 0.15), rgba(251, 146, 60, 0.1));
-    border-bottom: 1px solid rgba(244, 63, 94, 0.3);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: linear-gradient(135deg, rgba(244, 63, 94, 0.25), rgba(251, 146, 60, 0.2));
+    border-bottom: 2px solid rgba(244, 63, 94, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 99;
-    padding: 12px 20px;
+    padding: 14px 20px;
     animation: slideDown var(--transition-slow);
+    box-shadow: 0 4px 15px rgba(244, 63, 94, 0.15);
 }
 
 .dev-banner-content {
