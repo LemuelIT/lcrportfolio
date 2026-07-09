@@ -1,32 +1,98 @@
 /**
- * Lemuel C. Reyes Portfolio - Interactive Client Logic
+ * Lemuel C. Reyes Portfolio - Clean Modern UI Script
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Initial Page Load Transition
-    setTimeout(() => {
-        document.body.classList.remove("loading");
-    }, 100);
+    // 1. GSAP Scroll Animations
+    if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
 
-    // 2. DOM Elements Selection
+        // Simple Fade-Up Animation for elements with .fade-up class
+        // We use batching to stagger elements that appear together
+        gsap.set(".fade-up", { y: 30, opacity: 0, autoAlpha: 0 });
+
+        ScrollTrigger.batch(".fade-up", {
+            onEnter: batch => gsap.to(batch, {
+                autoAlpha: 1,
+                y: 0,
+                duration: 0.8,
+                stagger: 0.15,
+                ease: "power3.out",
+                overwrite: true
+            }),
+            once: true // Only animate once
+        });
+
+        // Active Link Observer via GSAP ScrollTrigger
+        const sections = gsap.utils.toArray(".scene");
+        const navLinks = document.querySelectorAll(".nav-link");
+        
+        sections.forEach(sec => {
+            ScrollTrigger.create({
+                trigger: sec,
+                start: "top center",
+                end: "bottom center",
+                onToggle: self => {
+                    if(self.isActive) {
+                        const id = sec.getAttribute("id");
+                        navLinks.forEach(link => {
+                            link.classList.remove("active");
+                            if(link.getAttribute("href") === `#${id}`) {
+                                link.classList.add("active");
+                            }
+                        });
+                    }
+                }
+            });
+        });
+
+    } else {
+        console.error("GSAP or ScrollTrigger not loaded.");
+    }
+
+    // 2. Interactive Cursor Glow
+    const cursorGlow = document.getElementById("cursor-glow");
+    if (cursorGlow) {
+        let mouseX = 0, mouseY = 0;
+        let glowX = 0, glowY = 0;
+        
+        document.addEventListener("mousemove", (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        const animateGlow = () => {
+            glowX += (mouseX - glowX) * 0.15;
+            glowY += (mouseY - glowY) * 0.15;
+            
+            cursorGlow.style.transform = `translate(calc(${glowX}px - 50%), calc(${glowY}px - 50%))`;
+            requestAnimationFrame(animateGlow);
+        };
+        
+        cursorGlow.style.top = '0px';
+        cursorGlow.style.left = '0px';
+        
+        animateGlow();
+    }
+
+    // 3. Navigation Header Styling & Mobile Toggle
     const header = document.querySelector(".header");
     const navMenu = document.getElementById("nav-menu");
     const navToggle = document.getElementById("nav-toggle");
-    const navLinks = document.querySelectorAll(".nav-link");
-    const sections = document.querySelectorAll("section[id]");
-    const cursorGlow = document.getElementById("cursor-glow");
-    const copyEmailBtn = document.getElementById("copy-email-btn");
-    const emailAddress = document.getElementById("email-address");
-    const copyIcon = document.getElementById("copy-icon");
-    const toast = document.getElementById("toast");
-    const backToTopBtn = document.getElementById("back-to-top");
-    const progressCircle = document.querySelector(".progress-ring-circle");
-    
-    // Circle calculations for scroll progress
-    // Radius = 20, Circumference = 2 * PI * r = ~125.66
-    const circumference = 2 * Math.PI * 20;
+    const navLinksList = document.querySelectorAll(".nav-link");
 
-    // 3. Mobile Navigation Menu Toggle
+    const handleHeaderScroll = () => {
+        if(header) {
+            if (window.scrollY > 50) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        }
+    };
+    window.addEventListener("scroll", handleHeaderScroll);
+    handleHeaderScroll();
+
     if (navToggle && navMenu) {
         navToggle.addEventListener("click", () => {
             const isOpen = navMenu.classList.toggle("open");
@@ -34,8 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.style.overflow = isOpen ? "hidden" : "";
         });
 
-        // Close menu when clicking nav links
-        navLinks.forEach(link => {
+        navLinksList.forEach(link => {
             link.addEventListener("click", () => {
                 navMenu.classList.remove("open");
                 navToggle.classList.remove("open");
@@ -44,141 +109,32 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 4. Header Scroll Styling
-    const handleHeaderScroll = () => {
-        if (window.scrollY > 50) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
-    };
-    window.addEventListener("scroll", handleHeaderScroll);
-    handleHeaderScroll(); // Call once initially
+    // 4. Copy Email to Clipboard Feature
+    const copyEmailBtn = document.getElementById("copy-email-btn");
+    const emailAddress = document.getElementById("email-address");
+    const copyIcon = document.getElementById("copy-icon");
+    const toast = document.getElementById("toast");
 
-    // 5. Scroll Progress & Scroll To Top Button
-    const handleScrollProgress = () => {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        
-        if (docHeight <= 0) return;
-        
-        const scrollPercent = scrollTop / docHeight;
-        
-        // Show/hide button
-        if (scrollTop > 300) {
-            backToTopBtn.classList.add("visible");
-        } else {
-            backToTopBtn.classList.remove("visible");
-        }
-
-        // Update SVG circle stroke-dashoffset
-        if (progressCircle) {
-            const offset = circumference - (scrollPercent * circumference);
-            progressCircle.style.strokeDashoffset = offset;
-        }
-    };
-
-    window.addEventListener("scroll", handleScrollProgress);
-
-    if (backToTopBtn) {
-        backToTopBtn.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    }
-
-    // 6. Interactive Cursor Ambient Light Source Tracker
-    if (cursorGlow) {
-        document.addEventListener("mousemove", (e) => {
-            cursorGlow.style.left = `${e.clientX}px`;
-            cursorGlow.style.top = `${e.clientY}px`;
-        });
-
-        document.addEventListener("mouseleave", () => {
-            cursorGlow.style.opacity = "0";
-        });
-
-        document.addEventListener("mouseenter", () => {
-            cursorGlow.style.opacity = "1";
-        });
-    }
-
-    // 7. Intersection Observer for Scroll Reveals
-    const revealCallback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("active");
-                // Optional: Unobserve if animation should run only once
-                observer.unobserve(entry.target);
-            }
-        });
-    };
-
-    const revealObserver = new IntersectionObserver(revealCallback, {
-        root: null,
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
-    });
-
-    const revealElements = document.querySelectorAll(".reveal-on-scroll");
-    revealElements.forEach(el => revealObserver.observe(el));
-
-    // 8. Active Link Observer highlighting navigation sections
-    const activeSectionCallback = (entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const sectionId = entry.target.getAttribute("id");
-                
-                navLinks.forEach(link => {
-                    link.classList.remove("active");
-                    if (link.getAttribute("href") === `#${sectionId}`) {
-                        link.classList.add("active");
-                    }
-                });
-            }
-        });
-    };
-
-    const sectionObserver = new IntersectionObserver(activeSectionCallback, {
-        root: null,
-        threshold: 0.4,
-        rootMargin: "-20% 0px -40% 0px"
-    });
-
-    sections.forEach(sec => sectionObserver.observe(sec));
-
-    // 9. Copy-to-Clipboard Direct Action for Email address
     if (copyEmailBtn && emailAddress && toast) {
         copyEmailBtn.addEventListener("click", () => {
             const emailText = emailAddress.textContent.trim();
             
-            navigator.clipboard.writeText(emailText)
-                .then(() => {
-                    // Show checkmark icon
+            navigator.clipboard.writeText(emailText).then(() => {
+                if (copyIcon) {
+                    copyIcon.className = "fa-solid fa-check";
+                }
+                
+                toast.classList.add("show");
+                
+                setTimeout(() => {
+                    toast.classList.remove("show");
                     if (copyIcon) {
-                        copyIcon.className = "fa-solid fa-check";
-                        copyIcon.style.color = "var(--primary)";
+                        copyIcon.className = "fa-regular fa-copy";
                     }
-                    
-                    // Show Toast Alert Notification
-                    toast.classList.add("show");
-                    
-                    // Reset visual cues after 3 seconds
-                    setTimeout(() => {
-                        toast.classList.remove("show");
-                        if (copyIcon) {
-                            copyIcon.className = "fa-regular fa-copy";
-                            copyIcon.style.color = "";
-                        }
-                    }, 3000);
-                })
-                .catch(err => {
-                    console.error("Failed to copy text: ", err);
-                });
+                }, 3000);
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
         });
     }
-
-    console.log("Portfolio Assets and Interactions Loaded Successfully");
 });

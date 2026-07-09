@@ -6,30 +6,23 @@
     <meta name="description" content="Lemuel C. Reyes - IT Portfolio. Aspiring Software Developer specializing in Flutter, Web Development, and Database Systems.">
     <meta name="keywords" content="Lemuel Reyes, Portfolio, Software Developer, Flutter Developer, IT Professional, Web Developer">
     <meta name="author" content="Lemuel C. Reyes">
-    <title>Lemuel C. Reyes | IT Portfolio & Aspiring Software Developer</title>
+    <title>Lemuel C. Reyes | Portfolio</title>
     
-    <!-- Google Fonts: Outfit for Headings, Inter for Body -->
+    <!-- Google Fonts: Poppins for Headings, Inter for Body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     
     <!-- FontAwesome 6.4.0 CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     
     <!-- Main Style Sheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
-<body class="loading">
-    <!-- Custom Mouse Radial Cursor Light Source (Interactive Hover Ambient Light) -->
+<body>
+    <!-- Custom Mouse Radial Cursor Light Source -->
     <div class="cursor-glow" id="cursor-glow"></div>
-
-    <!-- Background Grid Overlay & Ambient Blobs -->
-    <div class="bg-grid"></div>
-    <div class="bg-blobs">
-        <div class="blob blob-purple"></div>
-        <div class="blob blob-cyan"></div>
-    </div>
-
+    
     <!-- Development Status Banner -->
     <div class="dev-banner">
         <div class="dev-banner-content">
@@ -47,7 +40,7 @@
             
             <nav class="nav-menu" id="nav-menu">
                 <ul>
-                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -64,87 +57,71 @@
         </div>
     </header>
 
-    <!-- Main Content Area -->
+    <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
-        <section id="home" class="section hero-section">
-            <div class="container hero-container">
-                <div class="hero-content fade-in-up">
-                    <span class="hero-badge"><i class="fa-regular fa-hand-spock"></i> Hello, World!</span>
-                    <h1 class="hero-title">
-                        Hi, I'm <span class="gradient-text">Lemuel C. Reyes</span>
-                    </h1>
-                    <h2 class="hero-subtitle">Information Technology Student</h2>
-                    <p class="hero-description">
-                        Aspiring Software Developer and IT Professional. Passionate about engineering sleek user experiences, crafting database models, and building high-performance cross-platform applications.
-                    </p>
-                    <div class="hero-ctas">
-                        <a href="#projects" class="btn btn-primary">
-                            <span>View Projects</span> <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            <span>Contact Me</span> <i class="fa-regular fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Floating Scroll Indicator -->
-                <div class="scroll-indicator">
-                    <a href="#about" aria-label="Scroll down">
-                        <div class="mouse">
-                            <div class="wheel"></div>
-                        </div>
+        
+        <!-- Home Section -->
+        <section id="home" class="scene">
+            <div class="content hero-content">
+                <span class="hero-badge fade-up"><i class="fa-regular fa-hand-spock"></i> Hello, World!</span>
+                <h1 class="fade-up delay-1">Hi, I'm <span class="gradient-text-cyan">Lemuel C. Reyes</span></h1>
+                <h2 class="hero-subtitle fade-up delay-2">Information Technology Student</h2>
+                <p class="fade-up delay-3">Aspiring Software Developer and IT Professional. Passionate about engineering sleek user experiences, crafting database models, and building high-performance cross-platform applications.</p>
+                <div class="hero-ctas fade-up delay-4">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Projects</span> <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary glass-btn">
+                        <span>Contact Me</span> <i class="fa-regular fa-envelope"></i>
                     </a>
                 </div>
             </div>
+            <div class="scroll-arrow fade-in delay-5">
+                <a href="#about"><i class="fa-solid fa-chevron-down"></i></a>
+            </div>
         </section>
 
-        <!-- About Me Section -->
-        <section id="about" class="section about-section reveal-on-scroll">
-            <div class="container">
-                <div class="section-header">
-                    <span class="subtitle-badge">01. Discover</span>
-                    <h2 class="section-title">About Me</h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="about-grid">
-                    <div class="about-info">
-                        <h3 class="about-intro-title">Pioneering solutions with code.</h3>
-                        <p class="about-text">
-                            I am a student currently pursuing a <strong class="highlight-text">Bachelor of Science in Information Technology</strong>. Driven by curiosity and a commitment to continuous learning, I treat software engineering not just as a career choice, but as a gateway to turning complex concepts into tangible digital solutions.
-                        </p>
-                        <p class="about-text">
-                            My focus centers on constructing robust client-facing interfaces, organizing clean data schemas, and deploying intuitive cross-platform codebases. Whether designing web panels or mobile tools, my aim is to make technology feel effortless and accessible.
-                        </p>
-                        
-                        <div class="interests-container">
-                            <h4 class="interests-title">Core Development Focus:</h4>
-                            <div class="interests-tags">
-                                <span class="interest-tag"><i class="fa-solid fa-code"></i> Web Development</span>
-                                <span class="interest-tag"><i class="fa-solid fa-mobile-screen-button"></i> Flutter Development</span>
-                                <span class="interest-tag"><i class="fa-solid fa-database"></i> Database Systems</span>
-                            </div>
-                        </div>
+        <!-- About Section -->
+        <section id="about" class="scene">
+            <div class="content flex-row">
+                <div class="card glass-card about-card fade-up">
+                    <div class="section-header">
+                        <span class="subtitle-badge">01. Discover</span>
+                        <h2 class="section-title gradient-text-cyan">About Me</h2>
                     </div>
-                    
-                    <div class="about-stats-card glass-panel">
-                        <div class="card-inner-glow"></div>
-                        <div class="profile-placeholder">
-                            <i class="fa-solid fa-laptop-code profile-icon"></i>
+                    <div class="about-flex">
+                        <div class="about-text-content">
+                            <h3 class="about-intro-title text-white">Pioneering solutions with code.</h3>
+                            <p>I am a student currently pursuing a <strong class="highlight-cyan">Bachelor of Science in Information Technology</strong>. Driven by curiosity and a commitment to continuous learning, I treat software engineering not just as a career choice, but as a gateway to turning complex concepts into tangible digital solutions.</p>
+                            <p>My focus centers on constructing robust client-facing interfaces, organizing clean data schemas, and deploying intuitive cross-platform codebases. Whether designing web panels or mobile tools, my aim is to make technology feel effortless and accessible.</p>
+                            
+                            <div class="interests-container mt-sm">
+                                <h4 class="interests-title text-white">Core Development Focus:</h4>
+                                <div class="interests-tags">
+                                    <span class="interest-tag glass-tag"><i class="fa-solid fa-code"></i> Web Development</span>
+                                    <span class="interest-tag glass-tag"><i class="fa-solid fa-mobile-screen-button"></i> Flutter Development</span>
+                                    <span class="interest-tag glass-tag"><i class="fa-solid fa-database"></i> Database Systems</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="stats-grid">
-                            <div class="stat-item">
-                                <span class="stat-number">BSIT</span>
-                                <span class="stat-label">Degree Focus</span>
+                        
+                        <div class="about-stats-card glass-panel flex-shrink">
+                            <div class="profile-placeholder mb-sm">
+                                <i class="fa-solid fa-laptop-code profile-icon"></i>
                             </div>
-                            <div class="stat-item">
-                                <span class="stat-number">3+</span>
-                                <span class="stat-label">Core Projects</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">9+</span>
-                                <span class="stat-label">Key Frameworks</span>
+                            <div class="stats-grid">
+                                <div class="stat-item glass-tag">
+                                    <span class="stat-number">BSIT</span>
+                                    <span class="stat-label">Degree Focus</span>
+                                </div>
+                                <div class="stat-item glass-tag">
+                                    <span class="stat-number">3+</span>
+                                    <span class="stat-label">Core Projects</span>
+                                </div>
+                                <div class="stat-item glass-tag">
+                                    <span class="stat-number">9+</span>
+                                    <span class="stat-label">Key Frameworks</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -153,214 +130,144 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="section skills-section reveal-on-scroll">
-            <div class="container">
-                <div class="section-header">
+        <section id="skills" class="scene">
+            <div class="content full-width">
+                <div class="section-header text-center fade-up">
                     <span class="subtitle-badge">02. Stack</span>
-                    <h2 class="section-title">My Skills</h2>
-                    <div class="section-line"></div>
+                    <h2 class="section-title gradient-text-cyan">My Skills</h2>
                 </div>
-                
-                <div class="skills-grid">
-                    <!-- Flutter -->
-                    <div class="skill-card glass-panel">
-                        <div class="skill-icon-box" style="--accent-color: #38bdf8;">
-                            <i class="fa-brands fa-flutter"></i>
-                        </div>
-                        <h3 class="skill-name">Flutter</h3>
-                        <p class="skill-level">Cross-platform development</p>
+                <div class="skills-grid fade-up">
+                    <div class="skill-card glass-card">
+                        <i class="fa-brands fa-flutter" style="color: #38bdf8;"></i>
+                        <span>Flutter</span>
                     </div>
-
-                    <!-- Dart -->
-                    <div class="skill-card glass-panel">
-                        <div class="skill-icon-box" style="--accent-color: #0284c7;">
-                            <i class="fa-solid fa-terminal"></i>
-                        </div>
-                        <h3 class="skill-name">Dart</h3>
-                        <p class="skill-level">Reactive programming language</p>
+                    <div class="skill-card glass-card">
+                        <i class="fa-solid fa-terminal" style="color: #0284c7;"></i>
+                        <span>Dart</span>
                     </div>
-
-                    <!-- Firebase -->
-                    <div class="skill-card glass-panel">
-                        <div class="skill-icon-box" style="--accent-color: #f59e0b;">
-                            <i class="fa-solid fa-fire"></i>
-                        </div>
-                        <h3 class="skill-name">Firebase</h3>
-                        <p class="skill-level">Backend as a Service & Analytics</p>
+                    <div class="skill-card glass-card">
+                        <i class="fa-solid fa-fire" style="color: #f59e0b;"></i>
+                        <span>Firebase</span>
                     </div>
-
-                    <!-- HTML -->
-                    <div class="skill-card glass-panel">
-                        <div class="skill-icon-box" style="--accent-color: #ea580c;">
-                            <i class="fa-brands fa-html5"></i>
-                        </div>
-                        <h3 class="skill-name">HTML</h3>
-                        <p class="skill-level">Semantic layout & structure</p>
+                    <div class="skill-card glass-card">
+                        <i class="fa-brands fa-html5" style="color: #ea580c;"></i>
+                        <span>HTML</span>
                     </div>
-
-                    <!-- CSS -->
-                    <div class="skill-card glass-panel">
-                        <div class="skill-icon-box" style="--accent-color: #2563eb;">
-                            <i class="fa-brands fa-css3-alt"></i>
-                        </div>
-                        <h3 class="skill-name">CSS</h3>
-                        <p class="skill-level">Modern responsive layouts & styles</p>
+                    <div class="skill-card glass-card">
+                        <i class="fa-brands fa-css3-alt" style="color: #2563eb;"></i>
+                        <span>CSS</span>
                     </div>
-
-                    <!-- JavaScript -->
-                    <div class="skill-card glass-panel">
-                        <div class="skill-icon-box" style="--accent-color: #eab308;">
-                            <i class="fa-brands fa-js"></i>
-                        </div>
-                        <h3 class="skill-name">JavaScript</h3>
-                        <p class="skill-level">Dynamic logic & functionality</p>
+                    <div class="skill-card glass-card">
+                        <i class="fa-brands fa-js" style="color: #eab308;"></i>
+                        <span>JavaScript</span>
                     </div>
-
-                    <!-- MySQL -->
-                    <div class="skill-card glass-panel">
-                        <div class="skill-icon-box" style="--accent-color: #00758f;">
-                            <i class="fa-solid fa-database"></i>
-                        </div>
-                        <h3 class="skill-name">MySQL</h3>
-                        <p class="skill-level">Relational databases & SQL queries</p>
+                    <div class="skill-card glass-card">
+                        <i class="fa-solid fa-database" style="color: #00758f;"></i>
+                        <span>MySQL</span>
                     </div>
-
-                    <!-- Git & GitHub -->
-                    <div class="skill-card glass-panel">
-                        <div class="skill-icon-box" style="--accent-color: #a855f7;">
-                            <i class="fa-brands fa-github"></i>
-                        </div>
-                        <h3 class="skill-name">Git & GitHub</h3>
-                        <p class="skill-level">Version control & collaboration</p>
+                    <div class="skill-card glass-card">
+                        <i class="fa-brands fa-github" style="color: #a855f7;"></i>
+                        <span>Git & GitHub</span>
                     </div>
-
-                    <!-- UI/UX Design -->
-                    <div class="skill-card glass-panel">
-                        <div class="skill-icon-box" style="--accent-color: #ec4899;">
-                            <i class="fa-solid fa-compass-drafting"></i>
-                        </div>
-                        <h3 class="skill-name">UI/UX Design</h3>
-                        <p class="skill-level">User interfaces & wireframing</p>
+                    <div class="skill-card glass-card">
+                        <i class="fa-solid fa-compass-drafting" style="color: #ec4899;"></i>
+                        <span>UI/UX Design</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="section projects-section reveal-on-scroll">
-            <div class="container">
-                <div class="section-header">
+        <section id="projects" class="scene">
+            <div class="content">
+                <div class="section-header text-center mb-lg fade-up">
                     <span class="subtitle-badge">03. Portfolio</span>
-                    <h2 class="section-title">Featured Projects</h2>
-                    <div class="section-line"></div>
+                    <h2 class="section-title gradient-text-cyan">Featured Projects</h2>
                 </div>
-                
                 <div class="projects-grid">
-                    <!-- Project 1: Glowmax -->
-                    <article class="project-card glass-panel">
-                        <div class="project-card-image" style="background: linear-gradient(135deg, rgba(56,189,248,0.1), rgba(167,139,250,0.15));">
-                            <i class="fa-solid fa-heart-pulse project-placeholder-icon"></i>
-                            <div class="project-card-badge">Mobile App</div>
+                    <!-- Project 1 -->
+                    <div class="project-card glass-card fade-up">
+                        <div class="project-header">
+                            <div class="project-card-badge glass-tag">Mobile App</div>
+                            <div class="project-icon"><i class="fa-solid fa-heart-pulse"></i></div>
                         </div>
-                        <div class="project-card-content">
-                            <h3 class="project-card-title">Glowmax</h3>
-                            <p class="project-card-desc">
-                                A self-care and challenge-based mobile application designed to help users improve daily habits, track routine challenges, and build progressive personal growth strategies.
-                            </p>
-                            <div class="project-tags">
-                                <span class="project-tag">Flutter</span>
-                                <span class="project-tag">Dart</span>
-                                <span class="project-tag">Firebase</span>
-                                <span class="project-tag">UI/UX</span>
-                            </div>
-                            <div class="project-actions">
-                                <a href="https://github.com/LemuelIT/Glowmax" class="btn btn-project" target="_blank" rel="noopener noreferrer">
-                                    <span>View Project</span> <i class="fa-brands fa-github"></i>
-                                </a>
-                            </div>
+                        <h3>Glowmax</h3>
+                        <p>A self-care and challenge-based mobile application designed to help users improve daily habits, track routine challenges, and build progressive personal growth strategies.</p>
+                        <div class="tags">
+                            <span class="tag glass-tag">Flutter</span>
+                            <span class="tag glass-tag">Dart</span>
+                            <span class="tag glass-tag">Firebase</span>
+                            <span class="tag glass-tag">UI/UX</span>
                         </div>
-                    </article>
-
-                    <!-- Project 2: PPJO Jail Management System -->
-                    <article class="project-card glass-panel">
-                        <div class="project-card-image" style="background: linear-gradient(135deg, rgba(244,63,94,0.1), rgba(245,158,11,0.15));">
-                            <i class="fa-solid fa-shield-halved project-placeholder-icon"></i>
-                            <div class="project-card-badge">Web System</div>
+                        <div class="project-links">
+                            <a href="https://github.com/LemuelIT/Glowmax" target="_blank" class="btn btn-project"><i class="fa-brands fa-github"></i> View Source</a>
                         </div>
-                        <div class="project-card-content">
-                            <h3 class="project-card-title">PPJO Jail Management System</h3>
-                            <p class="project-card-desc">
-                                A secure, digital management platform engineered to catalog inmate rosters, track incident histories, schedule visitation shifts, and generate critical administrative reports.
-                            </p>
-                            <div class="project-tags">
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">CSS</span>
-                                <span class="project-tag">JavaScript</span>
-                                <span class="project-tag">MySQL</span>
-                            </div>
-                            <div class="project-actions">
-                                <a href="https://github.com/LemuelIT/PPJO-Jail-Management-System" class="btn btn-project" target="_blank" rel="noopener noreferrer">
-                                    <span>View Project</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                            </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card glass-card fade-up">
+                        <div class="project-header">
+                            <div class="project-card-badge glass-tag">Web System</div>
+                            <div class="project-icon"><i class="fa-solid fa-shield-halved"></i></div>
                         </div>
-                    </article>
-
-                    <!-- Project 3: Movie Watchlist App -->
-                    <article class="project-card glass-panel">
-                        <div class="project-card-image" style="background: linear-gradient(135deg, rgba(168,85,247,0.1), rgba(236,72,153,0.15));">
-                            <i class="fa-solid fa-clapperboard project-placeholder-icon"></i>
-                            <div class="project-card-badge">Desktop App</div>
+                        <h3>PPJO Jail Management</h3>
+                        <p>A secure, digital management platform engineered to catalog inmate rosters, track incident histories, schedule visitation shifts, and generate critical administrative reports.</p>
+                        <div class="tags">
+                            <span class="tag glass-tag">HTML</span>
+                            <span class="tag glass-tag">CSS</span>
+                            <span class="tag glass-tag">JavaScript</span>
+                            <span class="tag glass-tag">MySQL</span>
                         </div>
-                        <div class="project-card-content">
-                            <h3 class="project-card-title">Movie Watchlist App</h3>
-                            <p class="project-card-desc">
-                                An offline desktop tool that lets users index movies, store customized ratings, flag watchlist items, and sort their cinema catalog via a responsive local database architecture.
-                            </p>
-                            <div class="project-tags">
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">CSS</span>
-                                <span class="project-tag">JavaScript</span>
-                                <span class="project-tag">Local Storage</span>
-                            </div>
-                            <div class="project-actions">
-                                <a href="https://github.com/LemuelIT/Movie-Watchlist-App" class="btn btn-project" target="_blank" rel="noopener noreferrer">
-                                    <span>View Project</span> <i class="fa-solid fa-laptop"></i>
-                                </a>
-                            </div>
+                        <div class="project-links">
+                            <a href="https://github.com/LemuelIT/PPJO-Jail-Management-System" target="_blank" class="btn btn-project"><i class="fa-brands fa-github"></i> View Source</a>
                         </div>
-                    </article>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card glass-card fade-up">
+                        <div class="project-header">
+                            <div class="project-card-badge glass-tag">Desktop App</div>
+                            <div class="project-icon"><i class="fa-solid fa-clapperboard"></i></div>
+                        </div>
+                        <h3>Movie Watchlist App</h3>
+                        <p>An offline desktop tool that lets users index movies, store customized ratings, flag watchlist items, and sort their cinema catalog via a responsive local database architecture.</p>
+                        <div class="tags">
+                            <span class="tag glass-tag">HTML</span>
+                            <span class="tag glass-tag">CSS</span>
+                            <span class="tag glass-tag">JavaScript</span>
+                            <span class="tag glass-tag">Local Storage</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/LemuelIT/Movie-Watchlist-App" target="_blank" class="btn btn-project"><i class="fa-brands fa-github"></i> View Source</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Education Section -->
-        <section id="education" class="section education-section reveal-on-scroll">
-            <div class="container">
-                <div class="section-header">
+        <section id="education" class="scene">
+            <div class="content">
+                <div class="section-header text-center fade-up">
                     <span class="subtitle-badge">04. Education</span>
-                    <h2 class="section-title">Educational Background</h2>
-                    <div class="section-line"></div>
+                    <h2 class="section-title gradient-text-cyan">Educational Background</h2>
                 </div>
-                
-                <div class="timeline-container">
-                    <div class="timeline-item glass-panel">
+                <div class="timeline-container fade-up">
+                    <div class="timeline-item glass-card">
                         <div class="timeline-dot"></div>
-                        <div class="timeline-header">
-                            <span class="timeline-period">Ongoing Education</span>
-                            <h3 class="timeline-degree">Bachelor of Science in Information Technology</h3>
-                        </div>
+                        <span class="timeline-period">Ongoing Education</span>
+                        <h3 class="timeline-degree">Bachelor of Science in Information Technology</h3>
                         <p class="timeline-institution"><i class="fa-solid fa-graduation-cap"></i> Major University Program</p>
                         <p class="timeline-desc">
                             Acquiring core knowledge in database structure, Object-Oriented Programming, UI/UX systems design, network setups, and information assurance. Focuses on bridging technical design theories with functional code assets.
                         </p>
-                        <div class="coursework-highlights">
-                            <h4 class="highlights-title">Key Coursework Focus:</h4>
+                        <div class="coursework-highlights mt-md">
+                            <h4 class="highlights-title text-white mb-sm">Key Coursework Focus:</h4>
                             <ul class="highlights-list">
-                                <li><i class="fa-solid fa-circle-notch"></i> Mobile Application Engineering (Flutter / Dart)</li>
-                                <li><i class="fa-solid fa-circle-notch"></i> Relational Database Management Systems (MySQL)</li>
-                                <li><i class="fa-solid fa-circle-notch"></i> Client-Side and Server-Side Web Architectures</li>
-                                <li><i class="fa-solid fa-circle-notch"></i> UI/UX Design Fundamentals & Usability Auditing</li>
+                                <li><i class="fa-solid fa-circle-notch highlight-cyan"></i> Mobile Application Engineering (Flutter / Dart)</li>
+                                <li><i class="fa-solid fa-circle-notch highlight-cyan"></i> Relational Database Management Systems (MySQL)</li>
+                                <li><i class="fa-solid fa-circle-notch highlight-cyan"></i> Client-Side and Server-Side Web Architectures</li>
+                                <li><i class="fa-solid fa-circle-notch highlight-cyan"></i> UI/UX Design Fundamentals & Usability Auditing</li>
                             </ul>
                         </div>
                     </div>
@@ -369,77 +276,43 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section contact-section reveal-on-scroll">
-            <div class="container">
-                <div class="section-header">
+        <section id="contact" class="scene return-scene">
+            <div class="content text-center fade-up">
+                <div class="section-header text-center">
                     <span class="subtitle-badge">05. Connect</span>
-                    <h2 class="section-title">Get In Touch</h2>
-                    <div class="section-line"></div>
+                    <h2 class="section-title text-white">Get In Touch</h2>
                 </div>
+                <h3 class="contact-pitch mb-sm text-white">Let's build something exceptional together.</h3>
+                <p class="subtitle mb-md contact-text">
+                    I am actively seeking internship opportunities and entry-level positions where I can contribute to design initiatives, solve practical coding tasks, and further develop my skills. Drop me a line, view my profiles, or copy my email to connect!
+                </p>
                 
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3 class="contact-pitch">Let's build something exceptional together.</h3>
-                        <p class="contact-text">
-                            I am actively seeking internship opportunities and entry-level positions where I can contribute to design initiatives, solve practical coding tasks, and further develop my skills. Drop me a line, view my profiles, or copy my email to connect!
-                        </p>
-                        
-                        <div class="contact-details">
-                            <!-- Email -->
-                            <div class="contact-detail-card glass-panel" id="copy-email-btn" title="Click to copy email address">
-                                <div class="detail-icon"><i class="fa-solid fa-envelope"></i></div>
-                                <div class="detail-content">
-                                    <span class="detail-label">Email Me</span>
-                                    <span class="detail-value" id="email-address">lemuelreyes.it@gmail.com</span>
-                                </div>
-                                <button class="copy-btn" aria-label="Copy email to clipboard">
-                                    <i class="fa-regular fa-copy" id="copy-icon"></i>
-                                </button>
-                            </div>
+                <div class="contact-details mt-md mb-md">
+                    <!-- Email Copy Card -->
+                    <div class="contact-detail-card glass-card glass-btn" id="copy-email-btn" title="Click to copy email address">
+                        <div class="detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="detail-content">
+                            <span class="detail-label text-white font-bold">Email Me</span><br/>
+                            <span class="detail-value text-white" id="email-address">lemuelreyes.it@gmail.com</span>
                         </div>
+                        <button class="copy-btn" aria-label="Copy email to clipboard">
+                            <i class="fa-regular fa-copy" id="copy-icon"></i>
+                        </button>
                     </div>
-                    
-                    <div class="contact-social-grid">
-                        <!-- GitHub -->
-                        <a href="https://github.com/LemuelIT" target="_blank" rel="noopener noreferrer" class="social-card glass-panel">
-                            <div class="social-icon" style="color: #a855f7;"><i class="fa-brands fa-github"></i></div>
-                            <span class="social-name">GitHub</span>
-                            <span class="social-handle">@LemuelIT</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
-                        </a>
-                        
-                        <!-- LinkedIn -->
-                        <a href="https://linkedin.com/in/lemuelreyes" target="_blank" rel="noopener noreferrer" class="social-card glass-panel">
-                            <div class="social-icon" style="color: #0a66c2;"><i class="fa-brands fa-linkedin"></i></div>
-                            <span class="social-name">LinkedIn</span>
-                            <span class="social-handle">Lemuel C. Reyes</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
-                        </a>
-                    </div>
+                </div>
+
+                <div class="contact-links">
+                    <a href="https://github.com/LemuelIT" target="_blank" class="btn contact-btn glass-btn text-white">
+                        <i class="fa-brands fa-github"></i> GitHub (@LemuelIT)
+                    </a>
+                    <a href="https://linkedin.com/in/lemuelreyes" target="_blank" class="btn contact-btn glass-btn text-white">
+                        <i class="fa-brands fa-linkedin"></i> LinkedIn (Lemuel C. Reyes)
+                    </a>
                 </div>
             </div>
         </section>
+        
     </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <p class="footer-copy">&copy; 2026 Lemuel C. Reyes. All Rights Reserved.</p>
-            <div class="footer-socials">
-                <a href="https://github.com/LemuelIT" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="https://linkedin.com/in/lemuelreyes" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="mailto:lemuelreyes.it@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scroll to Top with Radial Progress Indicator -->
-    <button class="back-to-top" id="back-to-top" aria-label="Scroll to top">
-        <svg class="progress-ring" width="48" height="48">
-            <circle class="progress-ring-circle" stroke="#38bdf8" stroke-width="4" fill="transparent" r="20" cx="24" cy="24"/>
-        </svg>
-        <i class="fa-solid fa-arrow-up back-to-top-arrow"></i>
-    </button>
 
     <!-- Alert Notification (Toast) for copying email -->
     <div class="toast" id="toast">
@@ -449,7 +322,10 @@
         </div>
     </div>
 
-    <!-- Main JavaScript File -->
-    <script src="script.js" defer></script>
+    <!-- GSAP Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js?v=4"></script>
 </body>
 </html>
