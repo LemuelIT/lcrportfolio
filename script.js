@@ -23,21 +23,35 @@ document.addEventListener("DOMContentLoaded", () => {
             once: true // Only animate once
         });
 
+        // 3D Fade-to-Back Scroll Parallax for Hero Section content
+        gsap.to("#home .content", {
+            scrollTrigger: {
+                trigger: "#home",
+                start: "top top",
+                end: "bottom top",
+                scrub: true
+            },
+            scale: 0.82,
+            opacity: 0,
+            y: -80,
+            ease: "power1.inOut"
+        });
+
         // Active Link Observer via GSAP ScrollTrigger
         const sections = gsap.utils.toArray(".scene");
         const navLinks = document.querySelectorAll(".nav-link");
-        
+
         sections.forEach(sec => {
             ScrollTrigger.create({
                 trigger: sec,
                 start: "top center",
                 end: "bottom center",
                 onToggle: self => {
-                    if(self.isActive) {
+                    if (self.isActive) {
                         const id = sec.getAttribute("id");
                         navLinks.forEach(link => {
                             link.classList.remove("active");
-                            if(link.getAttribute("href") === `#${id}`) {
+                            if (link.getAttribute("href") === `#${id}`) {
                                 link.classList.add("active");
                             }
                         });
@@ -55,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (cursorGlow) {
         let mouseX = 0, mouseY = 0;
         let glowX = 0, glowY = 0;
-        
+
         document.addEventListener("mousemove", (e) => {
             mouseX = e.clientX;
             mouseY = e.clientY;
@@ -64,14 +78,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const animateGlow = () => {
             glowX += (mouseX - glowX) * 0.15;
             glowY += (mouseY - glowY) * 0.15;
-            
+
             cursorGlow.style.transform = `translate(calc(${glowX}px - 50%), calc(${glowY}px - 50%))`;
             requestAnimationFrame(animateGlow);
         };
-        
+
         cursorGlow.style.top = '0px';
         cursorGlow.style.left = '0px';
-        
+
         animateGlow();
     }
 
@@ -82,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinksList = document.querySelectorAll(".nav-link");
 
     const handleHeaderScroll = () => {
-        if(header) {
+        if (header) {
             if (window.scrollY > 50) {
                 header.classList.add("scrolled");
             } else {
@@ -118,14 +132,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (copyEmailBtn && emailAddress && toast) {
         copyEmailBtn.addEventListener("click", () => {
             const emailText = emailAddress.textContent.trim();
-            
+
             navigator.clipboard.writeText(emailText).then(() => {
                 if (copyIcon) {
                     copyIcon.className = "fa-solid fa-check";
                 }
-                
+
                 toast.classList.add("show");
-                
+
                 setTimeout(() => {
                     toast.classList.remove("show");
                     if (copyIcon) {
