@@ -15,14 +15,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Geo&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Geo&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700;800&family=Share+Tech+Mono&display=swap"
         rel="stylesheet">
 
     <!-- FontAwesome 6.4.0 CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     <!-- Main Style Sheet -->
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=14">
 </head>
 
 <body class="pattern-background">
@@ -54,7 +54,7 @@
     <main>
 
         <!-- Home Section -->
-        <section id="home" class="scene">
+        <section id="home" class="scene section-bubble1">
             <div class="content hero-layout">
                 <div class="hero-content">
                     <h1 class="fade-up delay-1">Hi, I'm <span class="gradient-text-cyan">Lemuel C. Reyes</span></h1>
@@ -83,48 +83,158 @@
 
 
         <!-- Skills Section -->
-        <section id="skills" class="scene">
+        <section id="skills" class="scene section-bubble2">
             <div class="content full-width">
                 <div class="section-header text-center fade-up">
-                    <span class="subtitle-badge">02. Stack</span>
-                    <h2 class="section-title gradient-text-cyan">My Skills</h2>
+                    <h2 class="section-title gradient-text-cyan">Skills and Technology</h2>
                 </div>
-                <div class="skills-grid fade-up">
-                    <div class="skill-card glass-card">
-                        <i class="fa-brands fa-flutter" style="color: #38bdf8;"></i>
-                        <span>Flutter</span>
+
+                <div class="skills-marquee-wrapper fade-up">
+                    <!-- Row 1: Stacks & Frameworks -->
+                    <div class="skills-row-group">
+                        <div class="skills-row-header">
+                            <span class="row-label"><i class="fa-solid fa-code"></i> Stacks & Frameworks</span>
+                            <button class="see-all-btn" data-category="stacks" aria-label="See all Stacks and Frameworks">
+                                See All <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <div class="marquee-container">
+                            <div class="marquee-track marquee-left">
+                                <!-- Set 1 -->
+                                <div class="skill-card glass-card"><i class="fa-brands fa-flutter" style="color: #38bdf8;"></i><span>Flutter</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-terminal" style="color: #0284c7;"></i><span>Dart</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-fire" style="color: #f59e0b;"></i><span>Firebase</span></div>
+                                <div class="skill-card glass-card"><i class="fa-brands fa-html5" style="color: #ea580c;"></i><span>HTML5</span></div>
+                                <div class="skill-card glass-card"><i class="fa-brands fa-css3-alt" style="color: #2563eb;"></i><span>CSS3</span></div>
+                                <div class="skill-card glass-card"><i class="fa-brands fa-js" style="color: #eab308;"></i><span>JavaScript</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-database" style="color: #00758f;"></i><span>MySQL</span></div>
+                                <div class="skill-card glass-card"><i class="fa-brands fa-github" style="color: #a855f7;"></i><span>Git & GitHub</span></div>
+
+                                <!-- Set 2 -->
+                                <div class="skill-card glass-card"><i class="fa-brands fa-flutter" style="color: #38bdf8;"></i><span>Flutter</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-terminal" style="color: #0284c7;"></i><span>Dart</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-fire" style="color: #f59e0b;"></i><span>Firebase</span></div>
+                                <div class="skill-card glass-card"><i class="fa-brands fa-html5" style="color: #ea580c;"></i><span>HTML5</span></div>
+                                <div class="skill-card glass-card"><i class="fa-brands fa-css3-alt" style="color: #2563eb;"></i><span>CSS3</span></div>
+                                <div class="skill-card glass-card"><i class="fa-brands fa-js" style="color: #eab308;"></i><span>JavaScript</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-database" style="color: #00758f;"></i><span>MySQL</span></div>
+                                <div class="skill-card glass-card"><i class="fa-brands fa-github" style="color: #a855f7;"></i><span>Git & GitHub</span></div>
+
+                                <!-- Set 3 -->
+                                <div class="skill-card glass-card"><i class="fa-brands fa-flutter" style="color: #38bdf8;"></i><span>Flutter</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-terminal" style="color: #0284c7;"></i><span>Dart</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-fire" style="color: #f59e0b;"></i><span>Firebase</span></div>
+                                <div class="skill-card glass-card"><i class="fa-brands fa-html5" style="color: #ea580c;"></i><span>HTML5</span></div>
+                                <div class="skill-card glass-card"><i class="fa-brands fa-css3-alt" style="color: #2563eb;"></i><span>CSS3</span></div>
+                                <div class="skill-card glass-card"><i class="fa-brands fa-js" style="color: #eab308;"></i><span>JavaScript</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-database" style="color: #00758f;"></i><span>MySQL</span></div>
+                                <div class="skill-card glass-card"><i class="fa-brands fa-github" style="color: #a855f7;"></i><span>Git & GitHub</span></div>
+
+                                <!-- Set 4 -->
+                                <div class="skill-card glass-card"><i class="fa-brands fa-flutter" style="color: #38bdf8;"></i><span>Flutter</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-terminal" style="color: #0284c7;"></i><span>Dart</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-fire" style="color: #f59e0b;"></i><span>Firebase</span></div>
+                                <div class="skill-card glass-card"><i class="fa-brands fa-html5" style="color: #ea580c;"></i><span>HTML5</span></div>
+                                <div class="skill-card glass-card"><i class="fa-brands fa-css3-alt" style="color: #2563eb;"></i><span>CSS3</span></div>
+                                <div class="skill-card glass-card"><i class="fa-brands fa-js" style="color: #eab308;"></i><span>JavaScript</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-database" style="color: #00758f;"></i><span>MySQL</span></div>
+                                <div class="skill-card glass-card"><i class="fa-brands fa-github" style="color: #a855f7;"></i><span>Git & GitHub</span></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-card glass-card">
-                        <i class="fa-solid fa-terminal" style="color: #0284c7;"></i>
-                        <span>Dart</span>
+
+                    <!-- Row 2: Multimedia, Tools & Design -->
+                    <div class="skills-row-group">
+                        <div class="skills-row-header">
+                            <span class="row-label"><i class="fa-solid fa-palette"></i> Multimedia, Tools & Design</span>
+                            <button class="see-all-btn" data-category="multimedia" aria-label="See all Multimedia, Tools and Design">
+                                See All <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <div class="marquee-container">
+                            <div class="marquee-track marquee-right">
+                                <!-- Set 1 -->
+                                <div class="skill-card glass-card"><i class="fa-solid fa-compass-drafting" style="color: #ec4899;"></i><span>UI/UX Design</span></div>
+                                <div class="skill-card glass-card"><i class="fa-brands fa-figma" style="color: #a259ff;"></i><span>Figma</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-image" style="color: #31a8ff;"></i><span>Photoshop</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-pen-nib" style="color: #ff9a00;"></i><span>Illustrator</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-film" style="color: #ea4c89;"></i><span>Premiere Pro</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-wand-magic-sparkles" style="color: #00c4cc;"></i><span>Canva</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-swatchbook" style="color: #f43f5e;"></i><span>Graphic Design</span></div>
+
+                                <!-- Set 2 -->
+                                <div class="skill-card glass-card"><i class="fa-solid fa-compass-drafting" style="color: #ec4899;"></i><span>UI/UX Design</span></div>
+                                <div class="skill-card glass-card"><i class="fa-brands fa-figma" style="color: #a259ff;"></i><span>Figma</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-image" style="color: #31a8ff;"></i><span>Photoshop</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-pen-nib" style="color: #ff9a00;"></i><span>Illustrator</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-film" style="color: #ea4c89;"></i><span>Premiere Pro</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-wand-magic-sparkles" style="color: #00c4cc;"></i><span>Canva</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-swatchbook" style="color: #f43f5e;"></i><span>Graphic Design</span></div>
+
+                                <!-- Set 3 -->
+                                <div class="skill-card glass-card"><i class="fa-solid fa-compass-drafting" style="color: #ec4899;"></i><span>UI/UX Design</span></div>
+                                <div class="skill-card glass-card"><i class="fa-brands fa-figma" style="color: #a259ff;"></i><span>Figma</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-image" style="color: #31a8ff;"></i><span>Photoshop</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-pen-nib" style="color: #ff9a00;"></i><span>Illustrator</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-film" style="color: #ea4c89;"></i><span>Premiere Pro</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-wand-magic-sparkles" style="color: #00c4cc;"></i><span>Canva</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-swatchbook" style="color: #f43f5e;"></i><span>Graphic Design</span></div>
+
+                                <!-- Set 4 -->
+                                <div class="skill-card glass-card"><i class="fa-solid fa-compass-drafting" style="color: #ec4899;"></i><span>UI/UX Design</span></div>
+                                <div class="skill-card glass-card"><i class="fa-brands fa-figma" style="color: #a259ff;"></i><span>Figma</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-image" style="color: #31a8ff;"></i><span>Photoshop</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-pen-nib" style="color: #ff9a00;"></i><span>Illustrator</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-film" style="color: #ea4c89;"></i><span>Premiere Pro</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-wand-magic-sparkles" style="color: #00c4cc;"></i><span>Canva</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-swatchbook" style="color: #f43f5e;"></i><span>Graphic Design</span></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-card glass-card">
-                        <i class="fa-solid fa-fire" style="color: #f59e0b;"></i>
-                        <span>Firebase</span>
-                    </div>
-                    <div class="skill-card glass-card">
-                        <i class="fa-brands fa-html5" style="color: #ea580c;"></i>
-                        <span>HTML</span>
-                    </div>
-                    <div class="skill-card glass-card">
-                        <i class="fa-brands fa-css3-alt" style="color: #2563eb;"></i>
-                        <span>CSS</span>
-                    </div>
-                    <div class="skill-card glass-card">
-                        <i class="fa-brands fa-js" style="color: #eab308;"></i>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="skill-card glass-card">
-                        <i class="fa-solid fa-database" style="color: #00758f;"></i>
-                        <span>MySQL</span>
-                    </div>
-                    <div class="skill-card glass-card">
-                        <i class="fa-brands fa-github" style="color: #a855f7;"></i>
-                        <span>Git & GitHub</span>
-                    </div>
-                    <div class="skill-card glass-card">
-                        <i class="fa-solid fa-compass-drafting" style="color: #ec4899;"></i>
-                        <span>UI/UX Design</span>
+
+                    <!-- Row 3: Additional Skills -->
+                    <div class="skills-row-group pill-row">
+                        <div class="skills-row-header">
+                            <span class="row-label"><i class="fa-solid fa-sliders"></i> Additional Skills</span>
+                            <button class="see-all-btn" data-category="additional" aria-label="See all Additional Skills">
+                                See All <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <div class="marquee-container">
+                            <div class="marquee-track marquee-left">
+                                <!-- Set 1 -->
+                                <div class="skill-card glass-card"><i class="fa-solid fa-vial-circle-check" style="color: #10b981;"></i><span>Software Testing & QA</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-file-code" style="color: #6366f1;"></i><span>Technical Documentation</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-server" style="color: #14b8a6;"></i><span>Database Management</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-screwdriver-wrench" style="color: #f97316;"></i><span>Troubleshooting</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-diagram-project" style="color: #8b5cf6;"></i><span>Agile Workflow</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-display" style="color: #3b82f6;"></i><span>Responsive Design</span></div>
+
+                                <!-- Set 2 -->
+                                <div class="skill-card glass-card"><i class="fa-solid fa-vial-circle-check" style="color: #10b981;"></i><span>Software Testing & QA</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-file-code" style="color: #6366f1;"></i><span>Technical Documentation</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-server" style="color: #14b8a6;"></i><span>Database Management</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-screwdriver-wrench" style="color: #f97316;"></i><span>Troubleshooting</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-diagram-project" style="color: #8b5cf6;"></i><span>Agile Workflow</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-display" style="color: #3b82f6;"></i><span>Responsive Design</span></div>
+
+                                <!-- Set 3 -->
+                                <div class="skill-card glass-card"><i class="fa-solid fa-vial-circle-check" style="color: #10b981;"></i><span>Software Testing & QA</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-file-code" style="color: #6366f1;"></i><span>Technical Documentation</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-server" style="color: #14b8a6;"></i><span>Database Management</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-screwdriver-wrench" style="color: #f97316;"></i><span>Troubleshooting</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-diagram-project" style="color: #8b5cf6;"></i><span>Agile Workflow</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-display" style="color: #3b82f6;"></i><span>Responsive Design</span></div>
+
+                                <!-- Set 4 -->
+                                <div class="skill-card glass-card"><i class="fa-solid fa-vial-circle-check" style="color: #10b981;"></i><span>Software Testing & QA</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-file-code" style="color: #6366f1;"></i><span>Technical Documentation</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-server" style="color: #14b8a6;"></i><span>Database Management</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-screwdriver-wrench" style="color: #f97316;"></i><span>Troubleshooting</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-diagram-project" style="color: #8b5cf6;"></i><span>Agile Workflow</span></div>
+                                <div class="skill-card glass-card"><i class="fa-solid fa-display" style="color: #3b82f6;"></i><span>Responsive Design</span></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -134,7 +244,6 @@
         <section id="projects" class="scene">
             <div class="content">
                 <div class="section-header text-center mb-lg fade-up">
-                    <span class="subtitle-badge">03. Portfolio</span>
                     <h2 class="section-title gradient-text-cyan">Featured Projects</h2>
                 </div>
                 <div class="projects-grid">
@@ -222,7 +331,6 @@
         <section id="education" class="scene">
             <div class="content">
                 <div class="section-header text-center fade-up">
-                    <span class="subtitle-badge">04. History</span>
                     <h2 class="section-title gradient-text-cyan">Education & Experience</h2>
                 </div>
                 <div class="education-experience-grid fade-up">
@@ -362,7 +470,6 @@
         <section id="contact" class="scene return-scene">
             <div class="content text-center fade-up">
                 <div class="section-header text-center">
-                    <span class="subtitle-badge">05. Connect</span>
                     <h2 class="section-title text-white">Get In Touch</h2>
                 </div>
                 <h3 class="contact-pitch mb-sm text-white">Let's build something exceptional together.</h3>
@@ -399,7 +506,21 @@
             </div>
         </section>
 
-    </main>
+    <!-- Skills See All Modal -->
+    <div id="skills-modal" class="skills-modal">
+        <div class="skills-modal-overlay" id="skills-modal-overlay"></div>
+        <div class="skills-modal-container glass-card">
+            <div class="skills-modal-header">
+                <h3 id="skills-modal-title" class="gradient-text-cyan">Category Title</h3>
+                <button id="skills-modal-close" class="skills-modal-close" aria-label="Close modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="skills-modal-body" id="skills-modal-body">
+                <!-- Populated dynamically via JS -->
+            </div>
+        </div>
+    </div>
 
     <!-- Alert Notification (Toast) for copying email -->
     <div class="toast" id="toast">
@@ -413,7 +534,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <!-- Custom Script -->
-    <script src="script.js?v=4"></script>
+    <script src="script.js?v=14"></script>
 </body>
 
 </html>
